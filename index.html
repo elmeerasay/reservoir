@@ -445,9 +445,9 @@
                             socialLinksEl.innerHTML = '';
 
                             const websiteUrl = collection.externalUrl;
-                            const twitterUrl = collection.twitterUrl || (collection.twitterUsername ? `https://twitter.com/${collection.twitterUsername}` : null);
+                            const twitterUrl = collection.twitterUrl || (collection.twitterUsername ? `https://x.com/${collection.twitterUsername}` : null);
                             const discordUrl = collection.discordUrl;
-                            const openseaUrl = collection.slug ? `https://opensea.io/collection/${collection.slug}/overview` : null;
+                            const openseaUrl = collection.slug ? `https://opensea.io/collection/${collection.slug}` : null;
 
                             const createLinkElement = (label, url) => {
                                 const p = document.createElement('p');
