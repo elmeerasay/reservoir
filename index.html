@@ -387,9 +387,9 @@
             });
             
             function fetchData(collectionId) {
-                const apiUrlCollection = `https://api-apechain.reservoir.tools/collections/v7?id=${collectionId}`;
-                const apiUrlNfts = `https://api-apechain.reservoir.tools/tokens/v7?collection=${collectionId}&sortBy=floorAskPrice&sortDirection=asc&limit=17`;
-                const apiUrlSales = `https://api-apechain.reservoir.tools/sales/v6?collection=${collectionId}&limit=10&sortDirection=desc`;
+                const apiUrlCollection = `https://stats-mainnet.magiceden.io/collection_stats/stats?chain=apechain&collectionId=${collectionId}`;
+                const apiUrlNfts = `https://api-mainnet.magiceden.io/v4/assets?includeCollectionStats=true&includeMarket=true&sortBy=price&sortDir=asc&limit=10&chain=apechain&collectionId=${collectionId}&includeTopBid=false&offset=0`;
+                const apiUrlSales = `https://api-mainnet.magiceden.io/v4/activity/nft?limit=10&activityTypes[]=TRADE&chain=apechain&collectionId=${collectionId}`;
                 const baseUrlMagicEden = `https://web3.okx.com/id/nft/asset/apechain/${collectionId}`;
 
                 // Helper function to shorten address
